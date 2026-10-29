@@ -1,0 +1,32 @@
+# SAMPLE TECHNICAL DOCUMENT: NETWORK PACKET ANALYZER SPECIFICATION
+# NOTICE: This is an illustrative sample document created for software demonstration
+# and testing purposes. Do not treat values as verified commercial specifications.
+
+## 1. System Overview
+The Network Packet Analyzer is a modular software utility designed to capture, decode, and inspect Ethernet frames traversing a local network interface. The packet capture engine listens on promiscuous network sockets, extracts raw frame payloads, and parses header fields according to standard protocol definitions.
+
+The primary engineering objective is to assist network administrators in diagnosing packet loss, identifying abnormal latency spikes, and verifying correct firewall filtering rules during bench testing.
+
+## 2. Capture Architecture and Buffer Management
+The capture architecture utilizes a double-buffered ring buffer to prevent packet dropping during periods of sustained network congestion:
+- Primary socket listener: Ingests raw Ethernet frames directly from the kernel network stack.
+- Circular ring buffer: Maintains an in-memory queue capable of buffering 65,536 frames before ring overwrite.
+- Protocol decoding worker: Pops packets from the queue, validates checksum values, and routes decoded records to the telemetry pipeline.
+
+### 2.1 Supported Network Protocols
+The packet analyzer parser decodes headers for the following standard network protocols:
+1. Ethernet II: Source MAC address, destination MAC address, and EtherType identification.
+2. Internet Protocol (IPv4 and IPv6): Source IP address, destination IP address, TTL, and protocol identification.
+3. Transmission Control Protocol (TCP): Source port, destination port, sequence number, acknowledgment number, and flags (SYN, ACK, FIN, RST).
+4. User Datagram Protocol (UDP): Source port, destination port, packet length, and payload checksum.
+5. Address Resolution Protocol (ARP): Hardware type, protocol type, operation code, and sender hardware mapping.
+
+### 2.2 Filter Configuration Parameters
+Users can configure packet filtering rules using straightforward command-line expressions:
+- interface: Name of the physical or virtual network interface adapter (e.g., eth0 or wlan0).
+- promiscuous: Boolean flag enabling promiscuous capture mode on the host network adapter.
+- max_packets: Maximum number of packets to record before terminating the capture session.
+- output_file: Destination path where captured packet traces are stored in PCAP format.
+
+## 3. Operational Requirements and Troubleshooting
+The packet capture daemon requires elevated administrator or root privileges to bind raw network sockets. If the socket fails to initialize with a permission error, confirm that your user account possesses raw socket permissions. Verify that the network interface link is in an active carrier state before initiating capture sessions.

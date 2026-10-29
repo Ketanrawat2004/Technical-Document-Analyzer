@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Technical Document Analyzer - Summary Report
+  Generated on: 2026-10-29 03:55:12
+-->
+<technicalDocumentReport>
+  <header>
+    <title>Technical Document Analyzer</title>
+    <description>Summary Report and Practical Guide</description>
+    <date>2026-10-29</date>
+    <technology>Python 3 (Standard Library Only)</technology>
+  </header>
+
+  <summary>
+    A simple, offline Python program that analyzes plain-text (.txt) documents. It calculates word count, character count (with and without spaces), non-empty paragraphs, section headings, and the top 10 frequent technical words while ignoring common English stop words.
+  </summary>
+
+  <files>
+    <file name="main.py" type="Desktop GUI">Tkinter desktop application with document preview, calculated metric cards, and report export.</file>
+    <file name="cli.py" type="Command-Line Interface">Terminal version for running the analysis without opening a graphical window.</file>
+    <file name="analyzer.py" type="Analysis Engine">Core functions for reading files safely, cleaning punctuation, counting metrics, and finding frequent words.</file>
+    <file name="test_analyzer.py" type="Automated Tests">Python unittest suite with 7 test cases validating normal files, empty files, and error handling.</file>
+  </files>
+
+  <processFlow>
+    <step number="1" name="File Input">User enters or selects a .txt file. Program verifies existence and reads UTF-8 content.</step>
+    <step number="2" name="Text Cleaning">Converts text to lowercase and strips punctuation so words separate cleanly.</step>
+    <step number="3" name="Metric Calculation">Calculates total words, characters, non-empty paragraphs, and headings.</step>
+    <step number="4" name="Frequent Word Tally">Ignores common English stop words and counts remaining words in a Python dictionary.</step>
+    <step number="5" name="Report Export">Displays results on screen and offers to save a clean .txt report file.</step>
+  </processFlow>
+
+  <testResults totalTests="7" passed="7" failed="0">
+    <test id="1" name="Normal technical document" status="Passed" />
+    <test id="2" name="Empty file (0 bytes)" status="Passed" />
+    <test id="3" name="Document containing only headings" status="Passed" />
+    <test id="4" name="Punctuation and mixed capitalization" status="Passed" />
+    <test id="5" name="Missing or inaccessible file" status="Passed" />
+    <test id="6" name="Saving report to valid destination" status="Passed" />
+    <test id="7" name="Handling save error" status="Passed" />
+  </testResults>
+
+  <sampleDocumentResults>
+    <sample name="arduino_sensor_system.txt">
+      <words>399</words>
+      <charactersNoSpaces>2469</charactersNoSpaces>
+      <paragraphs>8</paragraphs>
+      <headings>18</headings>
+      <topFrequentWords>sensor (13), pin (8), microcontroller (5), power (5)</topFrequentWords>
+    </sample>
+    <sample name="software_install_guide.txt">
+      <words>476</words>
+      <charactersNoSpaces>2846</charactersNoSpaces>
+      <paragraphs>10</paragraphs>
+      <headings>20</headings>
+      <topFrequentWords>software (6), installation (5), port (5), system (5)</topFrequentWords>
+    </sample>
+    <sample name="sample.txt">
+      <words>393</words>
+      <charactersNoSpaces>2479</charactersNoSpaces>
+      <paragraphs>7</paragraphs>
+      <headings>13</headings>
+      <topFrequentWords>network (13), packet (10), capture (8), protocol (8)</topFrequentWords>
+    </sample>
+  </sampleDocumentResults>
+
+  <limitations>
+    <limitation>Plain-text (.txt) files only. Binary formats like Word (.docx) or PDF are not supported.</limitation>
+    <limitation>Numbered procedural list items (like '1. Do this') are formatted like numbered headings and will be counted.</limitation>
+    <limitation>Stop words are based on standard English.</limitation>
+    <limitation>Plurals and singulars (like 'sensor' and 'sensors') are counted as separate words.</limitation>
+  </limitations>
+</technicalDocumentReport>

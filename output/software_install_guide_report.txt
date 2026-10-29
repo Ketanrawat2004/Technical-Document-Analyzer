@@ -1,0 +1,43 @@
+==============================================================================
+TECHNICAL DOCUMENT ANALYSIS REPORT
+==============================================================================
+Generated On      : 2026-10-29 02:33:21
+Source Document   : software_install_guide.txt
+Source Path       : sample_documents/software_install_guide.txt
+
+------------------------------------------------------------------------------
+1. BASIC METRICS
+------------------------------------------------------------------------------
+Total Words                     : 476
+Total Characters (with spaces)  : 3,334
+Characters (excluding spaces)   : 2,846
+Non-Empty Paragraphs            : 10
+Headings Detected               : 20
+
+------------------------------------------------------------------------------
+2. TOP 10 FREQUENT WORDS (Common English Stop Words Excluded)
+------------------------------------------------------------------------------
+Rank  Word                          Occurrences
+----------------------------------------------
+1     software                      6         
+2     installation                  5         
+3     port                          5         
+4     system                        5         
+5     data                          4         
+6     environment                   4         
+7     log                           4         
+8     logger                        4         
+9     pip                           4         
+10    python                        4         
+
+------------------------------------------------------------------------------
+3. ANALYSIS NOTES & LIMITATIONS
+------------------------------------------------------------------------------
+- Headings are detected using Markdown prefixes ('# ') and numbered section prefixes
+  (e.g., '1. Introduction', '1.1 System Architecture', 'A. Overview').
+- Numbered list items in plain text that share this formatting may also be counted.
+- Common English stop words (such as 'the', 'is', 'and', 'to') and numeric digits
+  are omitted from the top frequent words list.
+==============================================================================
+End of Report
+==============================================================================

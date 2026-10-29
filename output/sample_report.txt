@@ -1,0 +1,43 @@
+==============================================================================
+TECHNICAL DOCUMENT ANALYSIS REPORT
+==============================================================================
+Generated On      : 2026-10-29 02:45:25
+Source Document   : sample.txt
+Source Path       : sample.txt
+
+------------------------------------------------------------------------------
+1. BASIC METRICS
+------------------------------------------------------------------------------
+Total Words                     : 393
+Total Characters (with spaces)  : 2,884
+Characters (excluding spaces)   : 2,479
+Non-Empty Paragraphs            : 7
+Headings Detected               : 13
+
+------------------------------------------------------------------------------
+2. TOP 10 FREQUENT WORDS (Common English Stop Words Excluded)
+------------------------------------------------------------------------------
+Rank  Word                          Occurrences
+----------------------------------------------
+1     network                       13        
+2     packet                        10        
+3     capture                       8         
+4     protocol                      8         
+5     address                       5         
+6     destination                   5         
+7     interface                     4         
+8     port                          4         
+9     raw                           4         
+10    source                        4         
+
+------------------------------------------------------------------------------
+3. ANALYSIS NOTES & LIMITATIONS
+------------------------------------------------------------------------------
+- Headings are detected using Markdown prefixes ('# ') and numbered section prefixes
+  (e.g., '1. Introduction', '1.1 System Architecture', 'A. Overview').
+- Numbered list items in plain text that share this formatting may also be counted.
+- Common English stop words (such as 'the', 'is', 'and', 'to') and numeric digits
+  are omitted from the top frequent words list.
+==============================================================================
+End of Report
+==============================================================================

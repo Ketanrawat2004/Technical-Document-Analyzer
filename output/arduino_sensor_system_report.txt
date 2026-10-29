@@ -1,0 +1,43 @@
+==============================================================================
+TECHNICAL DOCUMENT ANALYSIS REPORT
+==============================================================================
+Generated On      : 2026-10-29 02:42:11
+Source Document   : arduino_sensor_system.txt
+Source Path       : sample_documents/arduino_sensor_system.txt
+
+------------------------------------------------------------------------------
+1. BASIC METRICS
+------------------------------------------------------------------------------
+Total Words                     : 399
+Total Characters (with spaces)  : 2,883
+Characters (excluding spaces)   : 2,469
+Non-Empty Paragraphs            : 8
+Headings Detected               : 18
+
+------------------------------------------------------------------------------
+2. TOP 10 FREQUENT WORDS (Common English Stop Words Excluded)
+------------------------------------------------------------------------------
+Rank  Word                          Occurrences
+----------------------------------------------
+1     sensor                        13        
+2     pin                           8         
+3     microcontroller               5         
+4     power                         5         
+5     hardware                      4         
+6     monitoring                    4         
+7     serial                        4         
+8     telemetry                     4         
+9     analog                        3         
+10    arduino                       3         
+
+------------------------------------------------------------------------------
+3. ANALYSIS NOTES & LIMITATIONS
+------------------------------------------------------------------------------
+- Headings are detected using Markdown prefixes ('# ') and numbered section prefixes
+  (e.g., '1. Introduction', '1.1 System Architecture', 'A. Overview').
+- Numbered list items in plain text that share this formatting may also be counted.
+- Common English stop words (such as 'the', 'is', 'and', 'to') and numeric digits
+  are omitted from the top frequent words list.
+==============================================================================
+End of Report
+==============================================================================

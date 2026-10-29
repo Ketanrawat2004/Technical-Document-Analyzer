@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output test files or scratch logs
+*.log
+.DS_Store
+Thumbs.db
